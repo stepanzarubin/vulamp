@@ -1,7 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env 
+
+#curl
+sudo apt-get -y install curl
 
 #for compiling/installing things
-sudo apt-get install build-essential checkinstall software-properties-common
+sudo apt-get -y install build-essential checkinstall software-properties-common
 
 #ttf-mscorefonts-installer repository
 sudo add-apt-repository multiverse
