@@ -47,6 +47,8 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 
 #install via composer
 #composer global require "phpunit/phpunit=5.4.*"
+#make sure you have ~/.composer/vendor/bin/ in your path
+#export PATH=$PATH:/$HOME/.composer/vendor/bin/
 
 #mariadb
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password root"
