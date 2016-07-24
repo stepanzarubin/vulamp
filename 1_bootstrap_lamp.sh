@@ -39,9 +39,14 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 #latest version require at least php 5.6
 #curl -O https://phar.phpunit.de/phpunit.phar
 #using previous stable release
-curl -o phpunit.phar https://phar.phpunit.de/phpunit-old.phar
-chmod +x phpunit.phar
-sudo mv phpunit.phar /usr/local/bin/phpunit
+
+#this type of installation is broken right now
+#curl -o phpunit.phar https://phar.phpunit.de/phpunit-old.phar
+#chmod +x phpunit.phar
+#sudo mv phpunit.phar /usr/local/bin/phpunit
+
+#install via composer
+#composer global require "phpunit/phpunit=5.4.*"
 
 #mariadb
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password root"

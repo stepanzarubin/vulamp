@@ -10,6 +10,11 @@ sudo apt-get -y install ntp
 #cron
 sudo restart cron
 
+#user public_html directory (allows to keep all websites under ~/public_html/)
+#mkdir public_html
+#sudo a2enmod userdir
+#sudo usermod -a -G `whoami` www-data
+
 ### APACHE VHOST ###
 #create ssl folder
 sudo mkdir -p /etc/apache2/ssl/vg.project
