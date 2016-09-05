@@ -46,9 +46,14 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 #sudo mv phpunit.phar /usr/local/bin/phpunit
 
 #install via composer
-#composer global require "phpunit/phpunit=5.4.*"
+#sudo composer global require "phpunit/phpunit=5.4.*"
 #make sure you have ~/.composer/vendor/bin/ in your path
 #export PATH=$PATH:/$HOME/.composer/vendor/bin/
+
+#phpunit extra
+#sudo composer global require 'phpunit/phpunit-selenium=*'
+#sudo composer global require 'phpunit/dbunit=*'
+#sudo composer global require 'phpunit/php-invoker=*'
 
 #mariadb
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password root"
