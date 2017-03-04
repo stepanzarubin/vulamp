@@ -10,6 +10,11 @@ sudo apt-get -y install ntp
 #cron (can be stopped for dev)
 sudo restart cron
 
+#microsoft fonts
+#sudo add-apt-repository -y multiverse
+#sudo echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+#sudo apt-get -y install ttf-mscorefonts-installer
+
 ### APACHE VHOST ###
 #create ssl folder
 sudo mkdir -p /etc/apache2/ssl/vg.project
