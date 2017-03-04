@@ -8,7 +8,7 @@ if [ ! -f $DBFILE ]
         exit
 fi
 
-DBNAME=project_database_name
+DBNAME="db_name"
 DBPASS="root"
 
 echo "Drop current db, create new ..."

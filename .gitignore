@@ -10,8 +10,13 @@
 #your custom scrips
 *-local.sh
 
-#your Vagrantfile
+#your Vagrantfile and other files which has to be created based on example file
 Vagrantfile
+sh/db/importDb.sh
+3_bootstrap_project.sh
 
 #do not ignore README.md files
 !README.md
+
+#packages
+package

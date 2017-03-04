@@ -7,13 +7,8 @@ sudo dpkg-reconfigure --frontend noninteractive tzdata
 #ntp
 sudo apt-get -y install ntp
 
-#cron
+#cron (can be stopped for dev)
 sudo restart cron
-
-#user public_html directory (allows to keep all websites under ~/public_html/)
-#mkdir public_html
-#sudo a2enmod userdir
-#sudo usermod -a -G `whoami` www-data
 
 ### APACHE VHOST ###
 #create ssl folder
