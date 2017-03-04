@@ -52,7 +52,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 			#usually you do not need to rsync this folder with rsync-auto
 			rsync__auto: false
 
-		config.vm.synced_folder "..", "/var/www/html/vg.project",
+		config.vm.synced_folder "..", "/home/vagrant/public_html/vg.project",
 			type: "rsync",
 			rsync__args: ["--verbose", "--archive", "--delete", "-z", "--chmod=ug+w"],
 			group: "www-data",
@@ -62,7 +62,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		if Vagrant.has_plugin?("vagrant-gatling-rsync")
 		   #config.gatling.latency = 1.5 # min 0.2, low value may create sync issues, depends on your project size
 		   config.gatling.time_format = "%H:%M:%S"
-		   config.gatling.rsync_on_startup = true
+		   config.gatling.rsync_on_startup = false
 		end
 
   # Provider-specific configuration so you can fine-tune various

@@ -1,4 +1,4 @@
-#!/usr/bin/env 
+#!/usr/bin/env bash
 
 #curl
 sudo apt-get -y install curl
@@ -7,11 +7,15 @@ sudo apt-get -y install curl
 sudo apt-get -y install build-essential checkinstall software-properties-common
 
 #ttf-mscorefonts-installer repository
-sudo add-apt-repository multiverse
+sudo add-apt-repository -y multiverse
 
 #mariadb-server repository
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
-sudo add-apt-repository 'deb [arch=amd64,i386] http://mirrors.fe.up.pt/pub/mariadb/repo/10.1/ubuntu trusty main'
+sudo add-apt-repository -y 'deb [arch=amd64,i386] http://mirrors.fe.up.pt/pub/mariadb/repo/10.1/ubuntu trusty main'
+
+#php repository
+sudo apt-get -y install language-pack-en-base
+sudo LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php
 
 #update
 sudo apt-get update
@@ -25,35 +29,14 @@ sudo apt-get -y install ttf-mscorefonts-installer
 #apache
 sudo apt-get -y install apache2
 
-#php
-sudo apt-get -y install php5 php5-curl php5-gd php5-mcrypt php5-mysql php5-imap php5-json php5-intl
-sudo cp /usr/share/php5/php.ini-development /etc/php5/apache2/php.ini
-
-#enable modules
-sudo php5enmod imap
+#php 7.0
+/vulamp/sh/bootstraps/php/7.0.sh
 
 #composer
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+#/vulamp/sh/bootstraps/php/composer.sh
 
-#phpunit (optional since can be installed via composer)
-#latest version require at least php 5.6
-#curl -O https://phar.phpunit.de/phpunit.phar
-#using previous stable release
-
-#this type of installation is broken right now
-#curl -o phpunit.phar https://phar.phpunit.de/phpunit-old.phar
-#chmod +x phpunit.phar
-#sudo mv phpunit.phar /usr/local/bin/phpunit
-
-#install via composer
-#sudo composer global require "phpunit/phpunit=5.4.*"
-#make sure you have ~/.composer/vendor/bin/ in your path
-#export PATH=$PATH:/$HOME/.composer/vendor/bin/
-
-#phpunit extra
-#sudo composer global require 'phpunit/phpunit-selenium=*'
-#sudo composer global require 'phpunit/dbunit=*'
-#sudo composer global require 'phpunit/php-invoker=*'
+#phpunit
+#/vulamp/sh/bootstraps/php/phpunit.sh
 
 #mariadb
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password root"
@@ -75,17 +58,27 @@ sudo mkdir /etc/apache2/ssl/
 sudo service apache2 stop
 sudo a2enmod rewrite
 sudo a2enmod ssl
+
+#user public_html directory (allows to keep all websites under ~/public_html/)
+mkdir ~/public_html
+sudo a2enmod userdir
+sudo usermod -a -G `whoami` www-data
+##end
+
 sudo service apache2 start
 #start on boot
 sudo update-rc.d -f apache2 remove
 sudo update-rc.d apache2 defaults
 
 #vim
-cp /vulamp/config/vim/.vimrc ~/.vimrc
+cp /vulamp/config/vim/.vimrc ~/.vimrc;
 sudo cp /vulamp/config/vim/.vimrc /root/.vimrc
 
 #ncdu
 sudo apt-get -y install ncdu
+
+#cleanup
+sudo apt-get -y autoremove
 
 #upgrade
 sudo apt-get -y upgrade
