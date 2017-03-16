@@ -6,9 +6,6 @@ sudo apt-get -y install curl
 #for compiling/installing things
 sudo apt-get -y install build-essential checkinstall software-properties-common
 
-#ttf-mscorefonts-installer repository
-sudo add-apt-repository -y multiverse
-
 #mariadb-server repository
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
 sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.cc.uoc.gr/mirrors/mariadb/repo/10.0/ubuntu trusty main'

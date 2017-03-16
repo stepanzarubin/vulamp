@@ -11,7 +11,9 @@ sudo apt-get -y install ntp
 sudo restart cron
 
 #microsoft fonts
+#ttf-mscorefonts-installer repository
 #sudo add-apt-repository -y multiverse
+#sudo apt-get update
 #sudo echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 #sudo apt-get -y install ttf-mscorefonts-installer
 
