@@ -2,7 +2,8 @@
 
 #apache
 sudo cp /vulamp/config/apache/apache2.conf /etc/apache2/
-sudo cp /vulamp/apache/mods-enabled/php7.0.conf /etc/apache2/mods-enabled/
+sudo cp /vulamp/apache/mods-available/dir.conf /etc/apache2/mods-available/
+sudo cp /vulamp/apache/mods-available/php7.0.conf /etc/apache2/mods-available/
 
 #php 5.5
 #sudo cp /vulamp/config/php/php5.5.ini /etc/php5/apache2/php.ini
