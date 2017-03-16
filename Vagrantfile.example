@@ -49,14 +49,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # vulamp and project data is separate
 		config.vm.synced_folder ".", "/vulamp",
 			type: "rsync",
-			rsync__args: ["--archive", "--delete", "--numeric-ids", "--chmod=ug+w"], #"--verbose"
+			rsync__args: ["--archive", "--delete", "--numeric-ids"], #"--verbose"
 			rsync__exclude: [".vagrant/"],
 			#usually you do not need to rsync this folder with rsync-auto
 			rsync__auto: false
 
 		config.vm.synced_folder "..", "/home/vagrant/public_html/vg.project",
 			type: "rsync",
-            rsync__args: ["--archive", "--delete", "--numeric-ids", "--chmod=ug+w"], #"--verbose"
+            rsync__args: ["--archive", "--delete", "--numeric-ids", "--chmod=g+w"], #"--verbose"
 			group: "www-data",
 			rsync__exclude: ["/vulamp", ".git/", ".idea/", "/frontend/www/assets/*"]
 
