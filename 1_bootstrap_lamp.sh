@@ -22,10 +22,6 @@ sudo apt-get update
 
 ### SOFTWARE ###
 
-#microsoft fonts
-sudo echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-sudo apt-get -y install ttf-mscorefonts-installer
-
 #apache
 sudo apt-get -y install apache2 libapache2-mod-php7.0
 
