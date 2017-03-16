@@ -10,8 +10,8 @@ sudo apt-get -y install build-essential checkinstall software-properties-common
 sudo add-apt-repository -y multiverse
 
 #mariadb-server repository
-sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
-sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://lon1.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu xenial main'
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.cc.uoc.gr/mirrors/mariadb/repo/10.0/ubuntu trusty main'
 
 #php repository
 sudo apt-get -y install language-pack-en-base
