@@ -17,11 +17,12 @@
 1. Install Vagrant https://www.vagrantup.com/
 2. Install Virtual Box https://www.virtualbox.org/. Make sure the disk with virtual machines has at least 50GB of free space
 3. **On Windows (optional)** I recommend [https://conemu.github.io/](https://conemu.github.io/) as a console emulator
-4. Install Vagrant plugins
-    1. `vagrant plugin install vagrant-rsync-back` ( [https://github.com/smerrill/vagrant-rsync-back](https://github.com/smerrill/vagrant-rsync-back) )
-    2. default `rsync` alternatives 
-    3. `vagrant plugin install vagrant-gatling-rsync` ( [https://github.com/smerrill/vagrant-gatling-rsync](https://github.com/smerrill/vagrant-gatling-rsync) )
-    4. [https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/](https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/)
+4. Install Vagrant plugins `vagrant plugin install [plugin_name]`
+    1. [https://github.com/smerrill/vagrant-rsync-back](https://github.com/smerrill/vagrant-rsync-back)
+    2. Default `rsync` alternatives:
+        3. [https://github.com/asyrjasalo/vagrant-syncer](https://github.com/asyrjasalo/vagrant-syncer)
+        4. [https://github.com/smerrill/vagrant-gatling-rsync](https://github.com/smerrill/vagrant-gatling-rsync)
+        5. [https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/](https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/)
 
     Official plugins [https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins](https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins)
     you can install any other which work better for your host OS

@@ -55,6 +55,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 		config.vm.synced_folder "..", "/home/vagrant/public_html/vg.project",
 			type: "rsync",
+			#trying to make rsync faster
+			#https://gist.github.com/KartikTalwar/4393116
+			#rsync__args: ["-aHAXxv", "--numeric-ids", "--delete", "--progress", "--chmod=ug+w"],
 			rsync__args: ["--verbose", "--archive", "--delete", "-z", "--chmod=ug+w"],
 			group: "www-data",
 			rsync__exclude: ["/vulamp", ".git/", ".idea/", "/frontend/www/assets/*"]
