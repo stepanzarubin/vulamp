@@ -20,9 +20,10 @@
 4. Install Vagrant plugins `vagrant plugin install [plugin_name]`
     1. [https://github.com/smerrill/vagrant-rsync-back](https://github.com/smerrill/vagrant-rsync-back)
     2. Default `rsync` alternatives:
-        3. [https://github.com/asyrjasalo/vagrant-syncer](https://github.com/asyrjasalo/vagrant-syncer)
-        4. [https://github.com/smerrill/vagrant-gatling-rsync](https://github.com/smerrill/vagrant-gatling-rsync)
-        5. [https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/](https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/)
+    
+	    1) [https://github.com/asyrjasalo/vagrant-syncer](https://github.com/asyrjasalo/vagrant-syncer)
+	    2) [https://github.com/smerrill/vagrant-gatling-rsync](https://github.com/smerrill/vagrant-gatling-rsync)
+	    3) [https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/](https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/)
 
     Official plugins [https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins](https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins)
     you can install any other which work better for your host OS
