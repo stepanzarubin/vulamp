@@ -19,11 +19,7 @@
 3. **On Windows (optional)** I recommend [https://conemu.github.io/](https://conemu.github.io/) as a console emulator
 4. Install Vagrant plugins `vagrant plugin install [plugin_name]`
     1. [https://github.com/smerrill/vagrant-rsync-back](https://github.com/smerrill/vagrant-rsync-back)
-    2. Default `rsync` alternatives:
-    
-	    1) [https://github.com/asyrjasalo/vagrant-syncer](https://github.com/asyrjasalo/vagrant-syncer)
-	    2) [https://github.com/smerrill/vagrant-gatling-rsync](https://github.com/smerrill/vagrant-gatling-rsync)
-	    3) [https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/](https://keylocation.sg/blog/vagrant-and-unison-without-a-plugin/)
+    2. Default `rsync` alternative: [https://github.com/smerrill/vagrant-gatling-rsync](https://github.com/smerrill/vagrant-gatling-rsync)
 
     Official plugins [https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins](https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins)
     you can install any other which work better for your host OS
