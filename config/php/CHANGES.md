@@ -4,4 +4,3 @@
 		upload_max_filesize = 50M
 
 	2) OPCache enabled and configured
-	   

@@ -23,7 +23,7 @@ sudo apt-get update
 ### SOFTWARE ###
 
 #apache
-sudo apt-get -y install apache2 libapache2-mod-php7.0
+sudo apt-get -y install apache2
 
 #php 7.0
 /vulamp/sh/bootstraps/php/7.0.sh
